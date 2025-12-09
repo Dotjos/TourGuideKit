@@ -11,6 +11,7 @@
 import type * as analytics from "../analytics.js";
 import type * as steps from "../steps.js";
 import type * as tour from "../tour.js";
+import type * as users from "../users.js";
 
 import type {
   ApiFromModules,
@@ -22,6 +23,7 @@ declare const fullApi: ApiFromModules<{
   analytics: typeof analytics;
   steps: typeof steps;
   tour: typeof tour;
+  users: typeof users;
 }>;
 
 /**
