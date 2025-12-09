@@ -6,7 +6,7 @@ export const Navbar = () => {
     <div className='w-[90%] mx-auto p-3  flex items-center justify-between mt-4 rounded'>
       <div>Jagora</div>
       <div className='flex justify-center items-center gap-2.5'>
-        <Link href="#">
+        <Link href="/dashboard">
           Dashboard
         </Link>
         <Link href="#">
