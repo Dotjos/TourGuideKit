@@ -1,7 +1,6 @@
 import { v } from "convex/values"
 import { mutation, query } from "./_generated/server"
 
-// Track analytics event
 export const trackEvent = mutation({
   args: {
     tourId: v.id("tours"),
@@ -17,7 +16,6 @@ export const trackEvent = mutation({
   },
 })
 
-// Get analytics for a tour
 export const getTourAnalytics = query({
   args: { tourId: v.id("tours") },
   handler: async (ctx, args) => {
@@ -26,14 +24,12 @@ export const getTourAnalytics = query({
       .withIndex("by_tour", (q) => q.eq("tourId", args.tourId))
       .collect()
 
-    // Calculate metrics
     const sessions = new Set(events.map((e) => e.sessionId)).size
     const completedSessions = new Set(
       events.filter((e) => e.event === "completed").map((e) => e.sessionId)
     ).size
     const skippedCount = events.filter((e) => e.event === "skipped").length
 
-    // Step-by-step breakdown
     const stepBreakdown = events.reduce(
       (acc, event) => {
         if (!acc[event.stepId]) {

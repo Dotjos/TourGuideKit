@@ -1,7 +1,6 @@
 import { v } from "convex/values"
 import { mutation, query } from "./_generated/server"
 
-// Get all tours for a user
 export const getTours = query({
   args: { userId: v.string() },
   handler: async (ctx, args) => {
@@ -13,7 +12,6 @@ export const getTours = query({
   },
 })
 
-// Get single tour
 export const getTour = query({
   args: { tourId: v.id("tours") },
   handler: async (ctx, args) => {
@@ -21,7 +19,6 @@ export const getTour = query({
   },
 })
 
-// Create tour
 export const createTour = mutation({
   args: {
     name: v.string(),
@@ -41,7 +38,6 @@ export const createTour = mutation({
   },
 })
 
-// Update tour
 export const updateTour = mutation({
   args: {
     tourId: v.id("tours"),
@@ -58,11 +54,9 @@ export const updateTour = mutation({
   },
 })
 
-// Delete tour
 export const deleteTour = mutation({
   args: { tourId: v.id("tours") },
   handler: async (ctx, args) => {
-    // Delete all steps associated with this tour
     const steps = await ctx.db
       .query("steps")
       .withIndex("by_tour", (q) => q.eq("tourId", args.tourId))
@@ -72,7 +66,6 @@ export const deleteTour = mutation({
       await ctx.db.delete(step._id)
     }
 
-    // Delete the tour
     await ctx.db.delete(args.tourId)
   },
 })

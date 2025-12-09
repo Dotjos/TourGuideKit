@@ -1,7 +1,6 @@
 import { v } from "convex/values"
 import { mutation, query } from "./_generated/server"
 
-// Get all steps for a tour
 export const getSteps = query({
   args: { tourId: v.id("tours") },
   handler: async (ctx, args) => {
@@ -13,7 +12,6 @@ export const getSteps = query({
   },
 })
 
-// Create step
 export const createStep = mutation({
   args: {
     tourId: v.id("tours"),
@@ -30,7 +28,6 @@ export const createStep = mutation({
   },
 })
 
-// Update step
 export const updateStep = mutation({
   args: {
     id: v.id("steps"),
@@ -46,7 +43,6 @@ export const updateStep = mutation({
   },
 })
 
-// Delete step
 export const deleteStep = mutation({
   args: { id: v.id("steps") },
   handler: async (ctx, args) => {
@@ -54,7 +50,6 @@ export const deleteStep = mutation({
   },
 })
 
-// Reorder steps
 export const reorderSteps = mutation({
   args: {
     updates: v.array(

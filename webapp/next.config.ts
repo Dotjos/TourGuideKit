@@ -3,9 +3,8 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ["avatars.githubusercontent.com"], // Add any image domains you need
+    domains: ["avatars.githubusercontent.com"],
   },
-  // Enable experimental features if needed
   experimental: {
     serverActions: true,
   },

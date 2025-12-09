@@ -1,6 +1,3 @@
-// Convex Auth Configuration
-// This file sets up authentication providers
-
 export default {
   providers: [
     {
