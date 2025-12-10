@@ -30,13 +30,14 @@ export const Navbar = () => {
 
 
   return (
+
     <div className={` ${navbarClasses}  mx-auto p-3 px-15 bg-(--neutral)  flex items-center justify-between pt-4 rounded`}>
           <div className="text-xl font-bold">Jagora</div>
       <div className='flex justify-center items-center gap-4 nav'>
          <Link href="/" className='hover:text-(--accent) hover:font-bold transition-all'>
               Home
               </Link>
-               <Link href="#" className='hover:text-(--accent) hover:font-bold transition-all'>
+               <Link href="/dashboard" className='hover:text-(--accent) hover:font-bold transition-all'>
               Dashboard
               </Link>
               <Link href="/about" className='hover:text-(--accent) hover:font-bold transition-all'>
@@ -48,7 +49,7 @@ export const Navbar = () => {
              
           </div>
           <div className='flex justify-center items-center gap-2.5'>
-              <Link href="#">
+              <Link href="/dashboard">
               <button className='px-4 py-2 hover:shadow rounded'>
                 Log in 
               </button>
@@ -62,6 +63,7 @@ export const Navbar = () => {
           <Menu className='menu' size={20} />
         </div>
           </div>
+
     </div>
   )
 }
