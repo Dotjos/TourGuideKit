@@ -3,6 +3,10 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary: #007B8C;
+  --accent : #FF8A00;
+  --neutral: #F7F9FB;
+  --textColor: #1C2833
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,6 +22,64 @@ body {
   font-family: var(--font-montserrat), sans-serif;
 }
 
+.demo{
+
+  background: linear-gradient(to right, var(--accent) 50%, var(--primary) 50%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-position 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.demo:hover{
+  background-position: 0 0;
+}
+
+.demo-two{
+
+  background: linear-gradient(to right, var(--primary) 50%, var(--accent) 50%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-position 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.demo-two:hover{
+  background-position: 0 0;
+}
+
+.demo-three{
+
+  background: linear-gradient(to right, white 50%, var(--accent) 50%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-position 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.demo-three:hover{
+  background-position: 0 0;
+  color: black;
+}
+
+@media screen and (width >= 760px) {
+  .menu{
+    display: none
+  }
+ 
+}
+
+@media screen and ( width <= 760px) {
+  .nav{
+    display: none
+  }
+}
 @layer base {
   * {
   }
