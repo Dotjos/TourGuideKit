@@ -68,14 +68,14 @@ body {
   color: black;
 }
 
-@media screen and (width >= 760px) {
+@media screen and (width >= 768px) {
   .menu{
     display: none
   }
  
 }
 
-@media screen and ( width <= 760px) {
+@media screen and ( width <= 768px) {
   .nav{
     display: none
   }

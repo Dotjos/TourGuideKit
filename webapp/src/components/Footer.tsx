@@ -5,7 +5,7 @@ import React from 'react'
 export const Footer = () => {
   return (
     <div className="bg-(--primary) py-15 text-white md:p-12 p-6">
-      <div className=' flex items-start justify-between '>
+      <div className=' grid grid-cols-1 md:grid-cols-4 sm:grid-cols-2 items-start justify-between '>
       <div>
         <div>
 

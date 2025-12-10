@@ -43,7 +43,7 @@ export const Navbar = () => {
               <Link href="/about" className='hover:text-(--accent) hover:font-bold transition-all'>
               About Us
               </Link>
-            <Link href="#" className='hover:text-(--accent) hover:font-bold transition-all'>
+            <Link href="/documentation" className='hover:text-(--accent) hover:font-bold transition-all'>
               How it works
               </Link>
              
