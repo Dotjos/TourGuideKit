@@ -68,21 +68,20 @@ body {
   color: black;
 }
 
-@media screen and (width >= 760px) {
+@media screen and (width >= 768px){
   .menu{
     display: none
   }
  
 }
 
-@media screen and ( width <= 760px) {
+@media screen and ( width <= 768px) {
   .nav{
     display: none
   }
 }
 @layer base {
-  * {
-  }
+ 
   body {
     @apply bg-gray-50 text-gray-900;
     font-feature-settings:
